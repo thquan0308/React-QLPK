@@ -95,7 +95,7 @@ const Header = () => {
             }}>
                 <Col md={6} sm={20} className='col-top'>                
                     <IoMdMenu style={{fontSize: "6vh", cursor: "pointer"}} onClick={() => showDrawer()} />
-                    <img style={{cursor: "pointer", height: "5vh"}} onClick={() => navigate("/")} src="../../../../public/Remove-bg.ai_1726163241481.png" alt="" />
+                    <img style={{cursor: "pointer", height: "5vh"}} onClick={() => navigate("/")} src="../../../../public/bookingcare-2020.svg" alt="" />
                 </Col>
 
                 <Col md={11} sm={24} xs={24} className='col-top'>                                    
@@ -112,7 +112,7 @@ const Header = () => {
                 </Col>
 
                 <Col md={4} sm={24} xs={24} className='col-top icon-container'> 
-                    <div className="icon-wrapper">
+                    {/* <div className="icon-wrapper">
                         <Input 
                         style={{
                             borderRadius: "5vh",
@@ -122,7 +122,7 @@ const Header = () => {
                         size="large" 
                         placeholder="Tìm kiếm đi cậu..." 
                         prefix={<SearchOutlined />} />
-                    </div>                                    
+                    </div>                                     */}
                 </Col>
 
                 <Col md={3} sm={3} xs={3} className='col-top icon-container'> 
@@ -186,6 +186,8 @@ const Header = () => {
             openModalDoiMK={openModalDoiMK}
             setOpenModalDoiMK={setOpenModalDoiMK}
             />
+
+            
         </div>
     )
 }

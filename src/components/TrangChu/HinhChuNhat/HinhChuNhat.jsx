@@ -13,7 +13,12 @@ const HinhChuNhat = (props) => {
                     </div>
                 </Col>
                 <Col md={18} sm={16} xs={16}>
-                    <p style={{fontSize: "4vh", fontWeight: "500", textAlign: "start", lineHeight: "5vh"}}>{txtP}</p>
+                    <p style={{fontSize: "4vh", 
+                        fontWeight: "500",
+                        textAlign: "start",
+                        lineHeight: "5vh"}}
+                    >{txtP}
+                    </p>
                 </Col>
             </Row>
         </div>

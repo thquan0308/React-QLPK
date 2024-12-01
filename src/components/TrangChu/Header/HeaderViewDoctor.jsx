@@ -88,7 +88,7 @@ const HeaderViewDoctor = () => {
             }}>
                 <Col md={6} sm={20} className='col-top'>                
                     <IoMdMenu style={{fontSize: "6vh", cursor: "pointer"}} onClick={() => showDrawer()} />
-                    <img style={{cursor: "pointer", height: "5vh"}} onClick={() => navigate("/")} src="../../../../public/Remove-bg.ai_1726163241481.png" alt="" />
+                    <img style={{cursor: "pointer", height: "5vh"}} onClick={() => navigate("/")} src="../../../../public/bookingcare-2020.svg" alt="" />
                 </Col>
 
                 <Col md={13} sm={24} xs={24} className='col-top'>                                    
