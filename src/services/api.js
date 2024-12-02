@@ -33,17 +33,17 @@ export const callRegisterBenhNhan = (email, password, firstName, lastName, addre
 }
 
 export const callLogout = () => {
-    const URL_BACKEND = '/api/users/logout-admin'    
+    const URL_BACKEND = '/api/users/logout-admin'
     return axios.post(URL_BACKEND)
 }
 
 export const callLogoutBenhNhan = () => {
-    const URL_BACKEND = '/api/users/logout-benh-nhan'    
+    const URL_BACKEND = '/api/users/logout-benh-nhan'
     return axios.post(URL_BACKEND)
 }
 
 export const fetchOneAccKH = (id) => {
-    const URL_BACKEND = `/api/users/get-one-kh?${id}`    
+    const URL_BACKEND = `/api/users/get-one-kh?${id}`
     return axios.get(URL_BACKEND)
 }
 
@@ -51,4 +51,9 @@ export const doiThongTinKH = (_idAcc, lastName, firstName, email, phone, address
     return axios.put('/api/users/doi-thong-tin', {
         _idAcc, lastName, firstName, email, phone, address, passwordMoi, image
     })
+}
+
+export const handleQuenPasswordBenhNhan = (email_doimk) => {
+    const URL_BACKEND = '/api/users/quen-mat-khau-benh-nhan'
+    return axios.post(URL_BACKEND, { email_doimk })
 }
