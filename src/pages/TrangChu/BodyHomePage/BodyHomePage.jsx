@@ -53,6 +53,10 @@ const BodyHomePage = () => {
         setLoadingCard(false);
     };
 
+    const handleRedirectPK = (item) => {
+        navigate(`/user/view-phong-kham?idPhongKham=${item}`);
+    };
+
     // Mảng chứa các giá trị src và txtP
     const items = [
         {
@@ -131,6 +135,7 @@ const BodyHomePage = () => {
               }`,
               txtP: `${phongKham?.name}`,
               txtAddress: `${phongKham?.address}`,
+              id: `${phongKham?._id}`,
           }))
         : [];
 
@@ -425,6 +430,7 @@ const BodyHomePage = () => {
                                 marginTop: "10px",
                                 padding: "3px 10px",
                             }}
+                            onClick={() => navigate("/user/phong-kham")}
                         >
                             Xem thêm
                         </span>
@@ -434,6 +440,7 @@ const BodyHomePage = () => {
                         width={400}
                         height={200}
                         loadingCard={loadingCard}
+                        urlDoctor={handleRedirectPK}
                     />
                 </Row>
             </div>
