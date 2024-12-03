@@ -102,7 +102,8 @@ const Header = () => {
     };
 
     const handleClickDoctor = () => {
-        window.location.href = "http://localhost:3001/login-doctor"; // Chuyển hướng đến URL mới
+        window.location.href =
+            "https://react-qlpk-doctor.vercel.app/login-doctor"; // Chuyển hướng đến URL mới
     };
 
     return (
