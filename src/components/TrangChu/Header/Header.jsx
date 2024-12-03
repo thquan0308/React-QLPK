@@ -101,6 +101,10 @@ const Header = () => {
         navigate(`/user/lich-hen?idKhachHang=${item}`);
     };
 
+    const handleClickDoctor = () => {
+        window.location.href = "http://localhost:3001/login-doctor"; // Chuyển hướng đến URL mới
+    };
+
     return (
         <div className="header-top">
             <Row
@@ -231,20 +235,20 @@ const Header = () => {
                     className={`txt-menu ${
                         activeTxtMenu === "#camnang" ? "active-txt-menu" : ""
                     }`}
-                    onClick={() => handleClick("#camnang")}
+                    onClick={() => handleClick("/admin/login-admin")}
                 >
-                    Cẩm nang
+                    Trang quản lý hệ thống
                 </p>
                 <Divider />
                 <p
                     className={`txt-menu ${
                         activeTxtMenu === "#lien-he" ? "active-txt-menu" : ""
                     }`}
-                    onClick={() => handleClick("#lien-he")}
+                    onClick={handleClickDoctor}
                 >
-                    Liên hệ hợp tác
+                    Trang quản lý bác sĩ
                 </p>
-                <Divider />
+                {/* <Divider />
                 <p
                     className={`txt-menu ${
                         activeTxtMenu === "#suc-khoe" ? "active-txt-menu" : ""
@@ -299,7 +303,7 @@ const Header = () => {
                 >
                     Vai trò của BookingCare
                 </p>
-                <Divider />
+                <Divider /> */}
             </Drawer>
 
             <LoginPage
