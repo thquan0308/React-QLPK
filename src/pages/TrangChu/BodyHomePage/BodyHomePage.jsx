@@ -373,7 +373,7 @@ const BodyHomePage = () => {
                             textAlign: "center",
                             backgroundColor: "#d0edf7",
                             color: "rgb(45 145 179)",
-                            margin: "3vh 22vh",
+                            margin: "3vh 20vh",
                             cursor: "pointer",
                             padding: "3px 10px",
                         }}
@@ -428,7 +428,9 @@ const BodyHomePage = () => {
                                 backgroundColor: "#d0edf7",
                                 color: "rgb(45 145 179)",
                                 marginTop: "10px",
+                                cursor: "pointer",
                                 padding: "3px 10px",
+                                marginBottom: "10px",
                             }}
                             onClick={() => navigate("/user/phong-kham")}
                         >
