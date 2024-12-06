@@ -66,7 +66,7 @@ const Home = () => {
                 {/* Thông báo trợ lý AI */}
                 {showNotification && (
                     <div className="ai-notification">
-                        Đây là trợ lý AI Coze,
+                        Đây là trợ lý HealthCare Buddy,
                         <br />
                         sẵn sàng hỗ trợ bạn!
                         <button
