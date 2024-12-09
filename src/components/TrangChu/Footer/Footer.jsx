@@ -13,7 +13,7 @@ const Footer = () => {
                         {/* kích thước video */}
                         <iframe
                             width="100%"
-                            height="450px"
+                            height="400px"
                             src="https://www.youtube.com/embed/FyDQljKtWnI"
                             title="[Nhóm 4] KTPM- Tìm hiểu và demo về công cụ SELENIUM"
                             frameBorder="0"
@@ -24,7 +24,7 @@ const Footer = () => {
                     </div>
                     <div className="content-right">
                         <div>
-                            <strong>- Giới thiệu về BookingCare:</strong>
+                            <strong>Giới thiệu về BookingCare:</strong>
                             <br />
                             BookingCare là một nền tảng y tế toàn diện giúp bệnh
                             nhân dễ dàng chọn lựa dịch vụ y tế từ mạng lưới bác
@@ -33,7 +33,7 @@ const Footer = () => {
                             khám nhanh chóng và thuận tiện.
                             <br />
                             <br />
-                            <strong>- Các chức năng chính:</strong>
+                            <strong>Các chức năng chính:</strong>
                             <li>Tìm kiếm bệnh viện</li>
                             <li>Tìm kiếm bác sĩ</li>
                             <li>Tìm kiếm chuyên khoa khám bệnh</li>

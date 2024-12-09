@@ -219,12 +219,31 @@ const LichHen = () => {
                                                     </span>
                                                 </p>
                                                 <p className="txt-phai">
-                                                    Nơi khám:{" "}
+                                                    Khoa khám:{" "}
                                                     {
                                                         item._idDoctor
                                                             ?.phongKhamId?.name
                                                     }
                                                 </p>
+                                                <p className="txt-phai">
+                                                    Giá khám:{" "}
+                                                    {console.log(item.giaKham)}
+                                                    {/* Log giá khám để kiểm tra */}
+                                                    {item.giaKham
+                                                        ? item.giaKham.toLocaleString()
+                                                        : "Chưa có giá khám"}
+                                                    <span
+                                                        style={{
+                                                            marginLeft: "5px",
+                                                        }}
+                                                    >
+                                                        {item.giaKham > 5000
+                                                            ? "VNĐ"
+                                                            : "USD"}{" "}
+                                                        {/* Thêm khoảng cách giữa giá và VNĐ */}
+                                                    </span>
+                                                </p>
+
                                                 <p className="txt-phai">
                                                     Địa chỉ:
                                                     <span
@@ -251,6 +270,7 @@ const LichHen = () => {
                                                         {item.lidokham}
                                                     </span>
                                                 </p>
+
                                                 {item.trangThaiXacNhan ? (
                                                     <>
                                                         <Button

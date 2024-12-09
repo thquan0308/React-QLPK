@@ -181,11 +181,30 @@ const MenuNav = (props) => {
                             marginLeft: "5px",
                         }}
                     >
-                        {userLastName} {userFirstName}
+                        {/* {userLastName} {userFirstName} */}
                     </span>
                 </p>
             ),
             icon: <UserOutlined />,
+            style: { pointerEvents: "none", userSelect: "none" },
+        },
+        {
+            key: "acc-ad",
+            label: (
+                <p style={{ fontSize: "17px", textAlign: "center" }}>
+                    <span
+                        style={{
+                            color: "red",
+                            fontWeight: "500",
+                            marginLeft: "5px",
+                            textAlign: "center",
+                        }}
+                    >
+                        {userLastName} {userFirstName}
+                    </span>
+                </p>
+            ),
+            // icon: <UserOutlined />,
             style: { pointerEvents: "none", userSelect: "none" },
         },
         {

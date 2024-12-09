@@ -106,7 +106,13 @@ const PageDatLichKham = () => {
     };
     const formatCurrency = (value) => {
         if (value === null || value === undefined) return "";
-        return `${value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")} VNĐ`;
+        // return `${value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")} VNĐ`;
+        return `${value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")} `;
+    };
+
+    const formatCurrencyEn = (value) => {
+        if (value === null || value === undefined) return "";
+        return `${value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")} `;
     };
 
     const handleDatLich = async (values) => {
@@ -390,6 +396,7 @@ const PageDatLichKham = () => {
                                                                 {formatCurrency(
                                                                     infoDoctorr?.giaKhamVN
                                                                 )}
+                                                                VNĐ
                                                             </span>
                                                         </Radio>
                                                     </Col>
@@ -422,9 +429,10 @@ const PageDatLichKham = () => {
                                                                     color: "red",
                                                                 }}
                                                             >
-                                                                {formatCurrency(
+                                                                {formatCurrencyEn(
                                                                     infoDoctorr?.giaKhamNuocNgoai
                                                                 )}
+                                                                USD
                                                             </span>
                                                         </Radio>
                                                     </Col>
@@ -699,7 +707,10 @@ const PageDatLichKham = () => {
                                         >
                                             <p className="txtTT">Giá khám</p>
                                             <p className="txtTT">
-                                                {formatCurrency(tongtien)}
+                                                {formatCurrency(tongtien)}{" "}
+                                                {tongtien > 5000
+                                                    ? "VNĐ"
+                                                    : "USD"}
                                             </p>
                                         </div>
                                         <div
@@ -731,7 +742,10 @@ const PageDatLichKham = () => {
                                                 className="txtTT"
                                                 style={{ color: "red" }}
                                             >
-                                                {formatCurrency(tongtien)}
+                                                {formatCurrency(tongtien)}{" "}
+                                                {tongtien > 5000
+                                                    ? "VNĐ"
+                                                    : "USD"}
                                             </p>
                                         </div>
                                     </Col>

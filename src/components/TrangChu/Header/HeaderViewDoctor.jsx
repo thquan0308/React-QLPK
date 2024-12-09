@@ -22,6 +22,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { doLogoutAction } from "../../../redux/account/accountSlice";
 import { UserOutlined } from "@ant-design/icons";
 import ModalDoiMK from "../ModalDoiMK/ModalDoiMK";
+import "./HeaderViewDoctor.scss";
 
 const HeaderViewDoctor = () => {
     const navigate = useNavigate();
@@ -92,6 +93,11 @@ const HeaderViewDoctor = () => {
         navigate(`/user/lich-hen?idKhachHang=${item}`);
     };
 
+    const handleClickDoctor = () => {
+        window.location.href =
+            "https://react-qlpk-doctor.vercel.app/login-doctor"; // Chuyển hướng đến URL mới
+    };
+
     return (
         <>
             <div className="header-top">
@@ -106,9 +112,12 @@ const HeaderViewDoctor = () => {
                         backgroundColor: "rgb(226, 250, 242)",
                     }}
                 >
-                    <Col md={6} sm={20} className="col-top">
+                    <Col md={6} sm={20} className="col-top-logo">
                         <IoMdMenu
-                            style={{ fontSize: "6vh", cursor: "pointer" }}
+                            style={{
+                                fontSize: "3vh",
+                                cursor: "pointer",
+                            }}
                             onClick={() => showDrawer()}
                         />
                         <img
@@ -262,7 +271,7 @@ const HeaderViewDoctor = () => {
                     </Col>
                 </Row>
 
-                <Drawer
+                {/* <Drawer
                     title="MENU"
                     placement={placement}
                     closable={false}
@@ -368,8 +377,46 @@ const HeaderViewDoctor = () => {
                         Vai trò của BookingCare
                     </p>
                     <Divider />
+                </Drawer> */}
+                <Drawer
+                    title="MENU"
+                    placement={placement}
+                    closable={false}
+                    onClose={onClose}
+                    open={open}
+                    key={placement}
+                >
+                    <p
+                        className={`txt-menu ${
+                            activeTxtMenu === "/" ? "active-txt-menu" : ""
+                        }`}
+                        onClick={() => handleClick("/")}
+                    >
+                        Trang chủ
+                    </p>
+                    <Divider />
+                    <p
+                        className={`txt-menu ${
+                            activeTxtMenu === "#camnang"
+                                ? "active-txt-menu"
+                                : ""
+                        }`}
+                        onClick={() => handleClick("/admin/login-admin")}
+                    >
+                        Trang quản lý hệ thống
+                    </p>
+                    <Divider />
+                    <p
+                        className={`txt-menu ${
+                            activeTxtMenu === "#lien-he"
+                                ? "active-txt-menu"
+                                : ""
+                        }`}
+                        onClick={handleClickDoctor}
+                    >
+                        Trang quản lý bác sĩ
+                    </p>
                 </Drawer>
-
                 <LoginPage
                     openModalLogin={openModalLogin}
                     setOpenModalLogin={setOpenModalLogin}

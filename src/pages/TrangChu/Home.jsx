@@ -21,7 +21,7 @@ import Footer from "../../components/TrangChu/Footer/Footer";
 import Header from "../../components/TrangChu/Header/Header";
 import "../TrangChu/home.scss";
 import BodyHomePage from "./BodyHomePage/BodyHomePage";
-
+import HeaderViewDoctor from "../../components/TrangChu/Header/HeaderViewDoctor";
 const Home = () => {
     const [showNotification, setShowNotification] = useState(true); // State điều khiển thông báo
 
@@ -52,14 +52,16 @@ const Home = () => {
 
     // Ẩn thông báo sau 5 giây
     useEffect(() => {
-        const timer = setTimeout(() => setShowNotification(false), 500000);
+        const timer = setTimeout(() => setShowNotification(false), 5000);
         return () => clearTimeout(timer); // Dọn dẹp khi unmount
     }, []);
 
     return (
         <>
             <div className="layout-app">
-                <Header />
+                {/* <Header /> */}
+                <HeaderViewDoctor />
+
                 <BodyHomePage />
                 <Footer />
 

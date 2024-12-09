@@ -1,0 +1,10 @@
+.col-top-logo {
+    display        : flex;
+    align-items    : center;
+    /* Căn giữa theo chiều dọc */
+    justify-content: flex-start;
+    /* Căn trái theo chiều ngang (nếu cần) */
+    height         : 100%;
+    /* Đảm bảo chiều cao đầy đủ của cột */
+
+}

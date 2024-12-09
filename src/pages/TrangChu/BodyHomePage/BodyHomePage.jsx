@@ -71,7 +71,27 @@ const BodyHomePage = () => {
             txtP: "Chuyên khoa",
             navigate: "/user/chuyen-khoa-kham",
         },
-        // Thêm các đối tượng khác nếu cần
+        {
+            key: "2",
+            src: "https://cdn.bookingcare.vn/fo/w640/2023/11/01/141017-csyt.png",
+            txtP: "Cơ sở y tế",
+            navigate: "/user/phong-kham",
+        },
+    ];
+
+    const items2 = [
+        {
+            key: "0",
+            src: "https://cdn.bookingcare.vn/fo/w384/2023/11/01/140234-bac-si.png",
+            txtP: "Bác sĩ",
+            navigate: "/user/bac-si-noi-bat",
+        },
+        {
+            key: "1",
+            src: "https://cdn.bookingcare.vn/fo/w384/2023/11/01/140537-chuyen-khoa.png",
+            txtP: "Chuyên khoa",
+            navigate: "/user/chuyen-khoa-kham",
+        },
     ];
 
     const items_toandien = [
@@ -169,58 +189,63 @@ const BodyHomePage = () => {
                 <div
                     style={{
                         position: "relative",
-                        width: "75%",
+                        width: "80%",
                         margin: "2px auto",
                     }}
                 >
                     <Carousel
                         className="custom-carousel"
                         autoplay
+                        autoplaySpeed={3000} // Thời gian autoplay là 3 giây (3000 ms)
                         draggable={true}
                         arrows={true}
                     >
                         <div>
                             <img
                                 width={"100%"}
-                                height={550}
-                                style={{ borderRadius: "20px" }}
-                                src="https://cdn.bookingcare.vn/fo/w1920/2023/10/10/163557-dat-lich-cham-soc-wecare247.png"
+                                height={650}
+                                style={{ borderRadius: "30px" }}
+                                // src="https://cdn.bookingcare.vn/fo/w1920/2023/10/10/163557-dat-lich-cham-soc-wecare247.png"
+                                src="https://marketplace.canva.com/EAF7c3cgAdg/1/0/1600w/canva-blue-and-orange-covid-19-friendly-corporate-healthcare-and-medical-x-frame-banner-aEVgBKX6DuA.jpg"
+                            />
+                        </div>
+                        <div>
+                            <img
+                                width={"100%"}
+                                height={650}
+                                style={{ borderRadius: "30px" }}
+                                // src="https://cdn.bookingcare.vn/fo/w1920/2023/09/07/141422-144204-dat-lich-kham-bookingcare-pharmacity.jpg"
+                                src="https://www.health-total.com/wp-content/uploads/2021/10/how-controlling-blood-sugar-benefits-your-heart-web-site-banner-size-834x332-.jpg"
                                 alt=""
                             />
                         </div>
                         <div>
                             <img
                                 width={"100%"}
-                                height={550}
-                                style={{ borderRadius: "20px" }}
-                                src="https://cdn.bookingcare.vn/fo/w1920/2023/09/07/141422-144204-dat-lich-kham-bookingcare-pharmacity.jpg"
+                                height={650}
+                                style={{ borderRadius: "30px" }}
+                                // src="https://bookingcare.vn/_next/image?url=https%3A%2F%2Fcdn.bookingcare.vn%2Ffo%2F2024%2F03%2F15%2F094346-hoi-dap-cong-dong.png&w=1920&q=75"
+                                src="https://www.health-total.com/wp-content/uploads/2023/04/7-healthy-eating-strategies-at-workplace-for-good-health-banner-1500-X-541.jpg"
                                 alt=""
                             />
                         </div>
                         <div>
                             <img
                                 width={"100%"}
-                                height={550}
-                                style={{ borderRadius: "20px" }}
-                                src="https://bookingcare.vn/_next/image?url=https%3A%2F%2Fcdn.bookingcare.vn%2Ffo%2F2024%2F03%2F15%2F094346-hoi-dap-cong-dong.png&w=1920&q=75"
+                                height={650}
+                                style={{ borderRadius: "30px" }}
+                                // src="https://cdn.bookingcare.vn/fo/w1920/2023/10/10/163557-dat-lich-cham-soc-wecare247.png"
+                                src="https://images.squarespace-cdn.com/content/v1/5361cc2ee4b0c9d8aaa7d4af/c003112c-2f07-4f02-b959-b79f840f4225/_Blog+Banner+%284.791+%C3%97+3in%29+%282%29.png"
                                 alt=""
                             />
                         </div>
                         <div>
                             <img
                                 width={"100%"}
-                                height={550}
-                                style={{ borderRadius: "20px" }}
-                                src="https://cdn.bookingcare.vn/fo/w1920/2023/10/10/163557-dat-lich-cham-soc-wecare247.png"
-                                alt=""
-                            />
-                        </div>
-                        <div>
-                            <img
-                                width={"100%"}
-                                height={550}
-                                style={{ borderRadius: "20px" }}
-                                src="https://bookingcare.vn/_next/image?url=https%3A%2F%2Fcdn.bookingcare.vn%2Ffo%2F2023%2F11%2F02%2F134537-group-12314.png&w=1920&q=75"
+                                height={650}
+                                style={{ borderRadius: "30px" }}
+                                // src="https://bookingcare.vn/_next/image?url=https%3A%2F%2Fcdn.bookingcare.vn%2Ffo%2F2023%2F11%2F02%2F134537-group-12314.png&w=1920&q=75"
+                                src="https://www.health-total.com/wp-content/uploads/2019/10/HT-banner-diabetes-600x400-01.jpg"
                                 alt=""
                             />
                         </div>
@@ -228,7 +253,18 @@ const BodyHomePage = () => {
                 </div>
             </Row>
 
-            <div className="danh-cho-ban">
+            <div
+                className="danh-cho-ban"
+                style={{
+                    backgroundImage:
+                        "url('https://cdn.bookingcare.vn/fo/2023/11/01/140311-background5.png')",
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    backgroundRepeat: "no-repeat",
+                    marginBottom: "20px",
+                    marginTop: "20px",
+                }}
+            >
                 <Row className="ben-trong">
                     <span
                         style={{
@@ -504,7 +540,7 @@ const BodyHomePage = () => {
                     >
                         Gợi ý của BookingCare
                     </span>
-                    {items.map((item, index) => (
+                    {/* {items.map((item, index) => (
                         <Col
                             key={index}
                             md={6}
@@ -513,6 +549,21 @@ const BodyHomePage = () => {
                             className="cot-ben-trong"
                         >
                             <HinhTron src={item.src} txtP={item.txtP} />
+                        </Col>
+                    ))} */}
+                    {items2.map((item, index) => (
+                        <Col
+                            key={index}
+                            md={6}
+                            sm={10}
+                            xs={24}
+                            className="cot-ben-trong"
+                        >
+                            <HinhTron
+                                src={item.src}
+                                txtP={item.txtP}
+                                redirectChuyenKhoa={item.navigate}
+                            />
                         </Col>
                     ))}
                 </Row>

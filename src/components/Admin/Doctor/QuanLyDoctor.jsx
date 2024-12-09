@@ -163,13 +163,13 @@ const QuanLyDoctor = (props) => {
                             >
                                 Thêm bác sĩ
                             </Button>
-                            <Button
+                            {/* <Button
                                 type="primary"
                                 icon={<FaFileExport size={15} />}
                                 className="custom-row"
                             >
                                 Export
-                            </Button>
+                            </Button> */}
                         </Space>
                     </Col>
                 </Row>

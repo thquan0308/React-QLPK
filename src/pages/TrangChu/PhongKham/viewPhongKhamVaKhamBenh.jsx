@@ -147,7 +147,7 @@ const ViewPhongKhamVaKhamBenh = () => {
     };
     const formatCurrency = (value) => {
         if (value === null || value === undefined) return "";
-        return `${value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")} VNĐ`;
+        return `${value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")}`;
     };
 
     console.log("selectedDoctor: ", selectedDoctor);
@@ -187,7 +187,7 @@ const ViewPhongKhamVaKhamBenh = () => {
                                     style={{
                                         marginTop: "-25px",
                                         marginLeft: "10px",
-                                        fontSize: "20px",
+                                        fontSize: "17px",
                                     }}
                                     dangerouslySetInnerHTML={{
                                         __html: dataPhongKhamByID?.description,
@@ -581,6 +581,10 @@ const ViewPhongKhamVaKhamBenh = () => {
                                                                         {formatCurrency(
                                                                             item?.giaKhamVN
                                                                         )}
+                                                                        {item?.giaKhamVN >
+                                                                        5000
+                                                                            ? " VNĐ"
+                                                                            : " USD"}
                                                                     </span>
                                                                 </div>
 
@@ -638,6 +642,10 @@ const ViewPhongKhamVaKhamBenh = () => {
                                                                         {formatCurrency(
                                                                             item?.giaKhamNuocNgoai
                                                                         )}
+                                                                        {item?.giaKhamVN >
+                                                                        5000
+                                                                            ? " USD"
+                                                                            : " VNĐ"}
                                                                     </span>
                                                                 </div>
                                                                 <a
@@ -676,7 +684,11 @@ const ViewPhongKhamVaKhamBenh = () => {
                                                                 >
                                                                     {formatCurrency(
                                                                         item?.giaKhamVN
-                                                                    )}
+                                                                    )}{" "}
+                                                                    {item?.giaKhamVN >
+                                                                    5000
+                                                                        ? "VNĐ"
+                                                                        : "USD"}
                                                                 </span>{" "}
                                                                 đến{" "}
                                                                 <span
@@ -689,6 +701,10 @@ const ViewPhongKhamVaKhamBenh = () => {
                                                                     {formatCurrency(
                                                                         item?.giaKhamNuocNgoai
                                                                     )}
+                                                                    {item?.giaKhamVN >
+                                                                    5000
+                                                                        ? " USD"
+                                                                        : " VNĐ"}
                                                                 </span>
                                                                 <a
                                                                     onClick={() =>

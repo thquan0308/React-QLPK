@@ -249,7 +249,8 @@ const Header = () => {
                 >
                     Trang quản lý bác sĩ
                 </p>
-                {/* <Divider />
+            </Drawer>
+            {/* <Divider />
                 <p
                     className={`txt-menu ${
                         activeTxtMenu === "#suc-khoe" ? "active-txt-menu" : ""
@@ -305,8 +306,6 @@ const Header = () => {
                     Vai trò của BookingCare
                 </p>
                 <Divider /> */}
-            </Drawer>
-
             <LoginPage
                 openModalLogin={openModalLogin}
                 setOpenModalLogin={setOpenModalLogin}

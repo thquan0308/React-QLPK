@@ -1,11 +1,12 @@
 .section-about {
     //cách lề trái
-    padding: 0 150px;
+    padding: 20px 150px;
 
     background-image: url('https://cdn.bookingcare.vn/fo/2023/11/01/140311-background5.png');
     /* Thêm hình nền */
 
     .section-about-header {
+
         /* Viền màu đỏ */
         text-align      : center;
         /* Căn giữa nội dung */
@@ -29,17 +30,25 @@
     }
 
     .section-about-content {
-        display: flex;
-        gap    : 15px;
-        width  : 100%;
+        padding-top: 30px;
+        display    : flex;
+        // gap    : 15px;
+        width      : 100%;
 
         .content-left {
-            width: 55%;
+            width          : 100%;
+            display        : flex;
+            justify-content: left;
+            /* Căn giữa video theo chiều ngang */
+            align-items    : center;
+            /* Căn giữa video theo chiều dọc */
+            padding-left   : 40px;
+
         }
 
         .content-right {
             margin-left: 5%; //cách bên trái video
-            width      : 40%;
+            width      : 100%;
 
             p {
                 text-align: justify;
@@ -56,6 +65,7 @@
         /* Khoảng cách dòng hợp lý */
         margin-top : 0px;
         /* Thêm chút khoảng cách trên */
+
     }
 
     .content-right p {

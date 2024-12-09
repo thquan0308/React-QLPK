@@ -1,13 +1,13 @@
 .styles {
     background-color: white;
-    border: 1px solid #e9d8d8;
-    padding: 8px 0;
-    border-radius: 8px;
-    text-align: center;
+    border          : 1px solid #e9d8d8;
+    padding         : 8px 0;
+    border-radius   : 8px;
+    text-align      : center;
 
     // Hiệu ứng khi hover
     &:hover {
-        cursor: pointer;
+        cursor          : pointer;
         background-color: #d3ffa9; // Màu nền khi hover
     }
 }

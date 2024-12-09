@@ -91,6 +91,11 @@ const PageViewDoctor = () => {
         return `${value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")} VNĐ`;
     };
 
+    const formatCurrencyEn = (value) => {
+        if (value === null || value === undefined) return "";
+        return `${value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")} USD`;
+    };
+
     const showDrawer = () => {
         setOpen(true);
     };
@@ -641,7 +646,7 @@ const PageViewDoctor = () => {
                                                 }}
                                                 className="span-gia-kham"
                                             >
-                                                {formatCurrency(
+                                                {formatCurrencyEn(
                                                     dataDoctor?.giaKhamNuocNgoai
                                                 )}
                                             </span>
@@ -684,7 +689,7 @@ const PageViewDoctor = () => {
                                                 fontWeight: "500",
                                             }}
                                         >
-                                            {formatCurrency(
+                                            {formatCurrencyEn(
                                                 dataDoctor?.giaKhamNuocNgoai
                                             )}
                                         </span>
@@ -712,6 +717,7 @@ const PageViewDoctor = () => {
                         <Row>
                             <Col span={18} style={{ margin: "auto" }}>
                                 <div
+                                    style={{ fontSize: "17px" }}
                                     dangerouslySetInnerHTML={{
                                         __html: dataDoctor?.mota,
                                     }}
