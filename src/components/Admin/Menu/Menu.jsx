@@ -17,6 +17,7 @@ import {
     MdOutlineRoom,
 } from "react-icons/md";
 
+import { FaUserGear } from "react-icons/fa6";
 const MenuNav = (props) => {
     const [theme, setTheme] = useState("light");
     const [current, setCurrent] = useState("1");
@@ -152,6 +153,18 @@ const MenuNav = (props) => {
             ],
         },
         {
+            key: "/admin/quan-ly-khach-hang",
+            label: (
+                <Link
+                    style={{ fontSize: "17px" }}
+                    to="/admin/quan-ly-khach-hang"
+                >
+                    Quản lý bệnh nhân
+                </Link>
+            ),
+            icon: <FaUserGear size={15} />,
+        },
+        {
             key: "/admin/quan-ly-lich-hen",
             label: (
                 <Link style={{ fontSize: "17px" }} to="/admin/quan-ly-lich-hen">
@@ -160,6 +173,7 @@ const MenuNav = (props) => {
             ),
             icon: <FieldTimeOutlined size={20} />,
         },
+
         {
             key: "acc-web",
             label: (

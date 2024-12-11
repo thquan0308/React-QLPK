@@ -233,7 +233,9 @@ const BodyHomePage = () => {
                             <img
                                 width={"100%"}
                                 height={650}
-                                style={{ borderRadius: "30px" }}
+                                style={{
+                                    borderRadius: "30px",
+                                }}
                                 // src="https://cdn.bookingcare.vn/fo/w1920/2023/10/10/163557-dat-lich-cham-soc-wecare247.png"
                                 src="https://images.squarespace-cdn.com/content/v1/5361cc2ee4b0c9d8aaa7d4af/c003112c-2f07-4f02-b959-b79f840f4225/_Blog+Banner+%284.791+%C3%97+3in%29+%282%29.png"
                                 alt=""
@@ -312,7 +314,11 @@ const BodyHomePage = () => {
                             md={12}
                             sm={24}
                             xs={24}
-                            style={{ marginBottom: "5vh" }}
+                            style={{
+                                marginBottom: "5vh",
+                                display: "flex",
+                                justifyContent: "center",
+                            }}
                         >
                             <HinhChuNhat src={item.src} txtP={item.txtP} />
                         </Col>

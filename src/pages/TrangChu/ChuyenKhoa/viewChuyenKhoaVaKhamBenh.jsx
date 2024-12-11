@@ -212,6 +212,7 @@ const ViewChuyenKhoaVaKhamBenh = () => {
                                     style={{
                                         marginTop: "-25px",
                                         marginLeft: "10px",
+                                        lineHeight: "1.8",
                                     }}
                                     dangerouslySetInnerHTML={{
                                         __html: dataChuyenKhoaByID?.description,

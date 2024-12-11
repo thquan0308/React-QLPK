@@ -14,6 +14,7 @@ const BodyAdmin = ({
     setAddressPK,
     setTenCK,
     setLichHen,
+    setTenKH,
 }) => {
     const onSearch = (value) => {
         console.log("Giá trị tìm kiếm:", value); // Thêm log này
@@ -33,6 +34,7 @@ const BodyAdmin = ({
         setAddressPK(value || "");
         setTenCK(value || "");
         setLichHen(value || "");
+        setTenKH(value || "");
     };
 
     return (

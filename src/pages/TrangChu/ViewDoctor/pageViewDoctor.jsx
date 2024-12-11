@@ -715,9 +715,16 @@ const PageViewDoctor = () => {
                         }}
                     >
                         <Row>
-                            <Col span={18} style={{ margin: "auto" }}>
+                            <Col
+                                span={18}
+                                style={{
+                                    margin: "auto",
+                                    fontFamily: "Arial",
+                                    lineHeight: "1.8",
+                                }}
+                            >
                                 <div
-                                    style={{ fontSize: "17px" }}
+                                    style={{ fontSize: "16px" }}
                                     dangerouslySetInnerHTML={{
                                         __html: dataDoctor?.mota,
                                     }}
@@ -737,7 +744,7 @@ const PageViewDoctor = () => {
                     >
                         <Row>
                             <Col span={18} style={{ margin: "auto" }}>
-                                phản hồi ở đây
+                                Phản hồi ở đây
                             </Col>
                         </Row>
                     </Col>

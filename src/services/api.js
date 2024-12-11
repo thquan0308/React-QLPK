@@ -57,3 +57,18 @@ export const handleQuenPasswordBenhNhan = (email_doimk) => {
     const URL_BACKEND = '/api/users/quen-mat-khau-benh-nhan'
     return axios.post(URL_BACKEND, { email_doimk })
 }
+
+export const fetchAllAccKH = (query) => {
+    const URL_BACKEND = `/api/users/get-all-kh?${query}`
+    return axios.get(URL_BACKEND)
+}
+
+export const khoaAccKH = (id, isActive) => {
+    return axios.put('/api/users/khoa-kh', {
+        id, isActive
+    })
+}
+
+export const deleteAccKH = (id) => {
+    return axios.delete(`/api/users/delete-kh/${id}`)
+}

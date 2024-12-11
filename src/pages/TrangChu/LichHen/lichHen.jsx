@@ -26,6 +26,7 @@ import { useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { fetchLichKham, handleHuyOrder } from "../../../services/apiDoctor";
 import { FaRegEye } from "react-icons/fa";
+import ModalLichHen from "./ModalLichHen";
 
 const LichHen = () => {
     let location = useLocation();
@@ -37,6 +38,14 @@ const LichHen = () => {
     const [dataLichHen, setDataLichHen] = useState([]);
     console.log("check dataLichHen: ", dataLichHen);
     const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const [openModalId, setOpenModalId] = useState(null); // Track which modal is open
+    const handleModalOpen = (id) => {
+        setOpenModalId(id); // Open specific modal
+    };
+    const handleModalClose = () => {
+        setOpenModalId(null); // Close the modal
+    };
 
     useEffect(() => {
         fetchLichHenByIdKH();
@@ -305,8 +314,8 @@ const LichHen = () => {
                                                         <Button
                                                             size="large"
                                                             onClick={() =>
-                                                                setIsModalOpen(
-                                                                    true
+                                                                handleModalOpen(
+                                                                    item._id
                                                                 )
                                                             }
                                                             type="primary"
@@ -328,37 +337,15 @@ const LichHen = () => {
                                                     ""
                                                 )}
 
-                                                <Modal
-                                                    style={{
-                                                        marginTop: "100px",
-                                                    }}
-                                                    width={1000}
-                                                    title={`Bệnh án chi tiết của ${item?.patientName}`}
-                                                    footer={true}
-                                                    open={isModalOpen}
-                                                    maskStyle={{
-                                                        backgroundColor:
-                                                            "rgba(255, 255, 255, 0.3)", // Màu trắng mờ
-                                                    }}
-                                                    onCancel={() =>
-                                                        setIsModalOpen(false)
+                                                <ModalLichHen
+                                                    isModalOpen={
+                                                        openModalId === item._id
                                                     }
-                                                >
-                                                    <Row>
-                                                        <Col
-                                                            span={24}
-                                                            md={24}
-                                                            style={{
-                                                                fontSize:
-                                                                    "18px", // Kích thước chữ to hơn
-                                                                lineHeight:
-                                                                    "1.6", // Khoảng cách giữa các dòng
-                                                            }}
-                                                        >
-                                                            {item.benhAn}
-                                                        </Col>
-                                                    </Row>
-                                                </Modal>
+                                                    setIsModalOpen={
+                                                        handleModalClose
+                                                    }
+                                                    item={item}
+                                                />
                                             </Col>
                                             <Col
                                                 span={22}
