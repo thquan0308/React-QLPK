@@ -22,7 +22,7 @@ const QuanLyBenhNhan = () => {
 
     const [currentPage, setCurrentPage] = useState(1);
     const [totalKHs, setTotalKHs] = useState(0);
-    const [pageSize, setPageSize] = useState(5);
+    const [pageSize, setPageSize] = useState(10);
 
     const [openCreateKH, setOpenCreateKH] = useState(false);
     const [openModalUpdate, setOpenModalUpdate] = useState(false);
@@ -63,12 +63,24 @@ const QuanLyBenhNhan = () => {
             },
             width: 80,
         },
+
         {
             title: "Email",
             dataIndex: "email",
             key: "email",
             render: (text) => <a>{text}</a>,
             // width: 180,
+        },
+        {
+            title: "Ngày Tạo",
+            dataIndex: "createdAt",
+            key: "createdAt",
+            sorter: (a, b) => new Date(a.createdAt) - new Date(b.createdAt),
+            defaultSortOrder: "descend", // Mặc định sắp xếp giảm dần
+            render: (text) => (
+                <>{new Date(text).toLocaleDateString("vi-VN")}</> // Hiển thị ngày tháng theo format
+            ),
+            width: 150,
         },
         {
             title: "Họ Và Tên",
@@ -197,7 +209,7 @@ const QuanLyBenhNhan = () => {
                         style={{ padding: "0 0 20px", fontSize: "18px" }}
                     >
                         <span style={{ fontWeight: "500", color: "navy" }}>
-                            THÔNG TIN KHÁCH HÀNG
+                            THÔNG TIN BỆNH NHÂN
                         </span>
                     </Col>
                 </Row>

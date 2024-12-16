@@ -23,6 +23,8 @@ import { doLogoutAction } from "../../../redux/account/accountSlice";
 import { UserOutlined } from "@ant-design/icons";
 import ModalDoiMK from "../ModalDoiMK/ModalDoiMK";
 import "./HeaderViewDoctor.scss";
+import { FaRegCircleQuestion } from "react-icons/fa6";
+import ModalCauHoi from "../ModalDoiMK/ModalCauHoi";
 
 const HeaderViewDoctor = () => {
     const navigate = useNavigate();
@@ -30,6 +32,7 @@ const HeaderViewDoctor = () => {
     const [open, setOpen] = useState(false);
     const [openModalDoiMK, setOpenModalDoiMK] = useState(false);
     const [openModalLogin, setOpenModalLogin] = useState(false);
+    const [openModalCauHoi, setOpenModalCauHoi] = useState(false);
     const [placement, setPlacement] = useState("left");
     const [activeTxtMenu, setActiveTxtMenu] = useState("");
     const dispatch = useDispatch();
@@ -51,6 +54,30 @@ const HeaderViewDoctor = () => {
         navigate(`${section}`);
     };
 
+    const itemss = [
+        {
+            key: "loginn",
+            label: (
+                <label
+                    style={{ display: "flex", cursor: "pointer" }}
+                    onClick={() => setOpenModalLogin(true)}
+                >
+                    <LuLogIn size={20} /> &nbsp; Đăng nhập
+                </label>
+            ),
+        },
+        {
+            key: "cauhoi",
+            label: (
+                <label
+                    style={{ display: "flex", cursor: "pointer" }}
+                    onClick={() => setOpenModalCauHoi(true)}
+                >
+                    <FaRegCircleQuestion size={20} /> &nbsp; Hỏi đáp
+                </label>
+            ),
+        },
+    ];
     const items = [
         {
             key: "1",
@@ -65,6 +92,17 @@ const HeaderViewDoctor = () => {
             label: (
                 <label onClick={() => handleRedirectLichHen(acc._id)}>
                     Lịch hẹn
+                </label>
+            ),
+        },
+        {
+            key: "cauhoi",
+            label: (
+                <label
+                    style={{ display: "flex", cursor: "pointer" }}
+                    onClick={() => setOpenModalCauHoi(true)}
+                >
+                    <FaRegCircleQuestion size={20} /> &nbsp; Hỏi đáp
                 </label>
             ),
         },
@@ -256,7 +294,7 @@ const HeaderViewDoctor = () => {
                                 </>
                             ) : (
                                 <>
-                                    <LuLogIn
+                                    {/* <LuLogIn
                                         onClick={() => setOpenModalLogin(true)}
                                         size={"5vh"}
                                         title="Login"
@@ -264,7 +302,14 @@ const HeaderViewDoctor = () => {
                                             cursor: "pointer",
                                             color: "rgb(69, 195, 210)",
                                         }}
-                                    />
+                                    /> */}
+                                    <Dropdown
+                                        menu={{
+                                            items: itemss || [],
+                                        }}
+                                    >
+                                        <LuLogIn size={"5vh"} />
+                                    </Dropdown>
                                 </>
                             )}
                         </div>
@@ -420,6 +465,10 @@ const HeaderViewDoctor = () => {
                 <LoginPage
                     openModalLogin={openModalLogin}
                     setOpenModalLogin={setOpenModalLogin}
+                />
+                <ModalCauHoi
+                    openModalCauHoi={openModalCauHoi}
+                    setOpenModalCauHoi={setOpenModalCauHoi}
                 />
                 <ModalDoiMK
                     openModalDoiMK={openModalDoiMK}
