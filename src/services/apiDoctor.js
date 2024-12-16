@@ -96,6 +96,10 @@ export const getTimeSlotsByDoctorAndDate = (query) => {
     const URL_BACKEND = `/api/doctor/get-time-slots?${query}`
     return axios.get(URL_BACKEND)
 }
+export const getTimeSlotsByDoctorAndDateEmpty = (query) => {
+    const URL_BACKEND = `/api/doctor/get-time-slots-empty?${query}`
+    return axios.get(URL_BACKEND)
+}
 
 // them thoi gian kham benh
 export const addTimeKhamBenh = (date, time, _id) => {

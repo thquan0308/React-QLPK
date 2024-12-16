@@ -18,7 +18,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import {
     fetchDoctorById,
     fetchDoctorByNgayGio,
-    getTimeSlotsByDoctorAndDate,
+    getTimeSlotsByDoctorAndDateEmpty,
 } from "../../../services/apiDoctor";
 import moment from "moment";
 
@@ -62,7 +62,7 @@ const PageViewDoctor = () => {
             if (!appointmentDate) return; // Kiểm tra nếu appointmentDate đã được chọn
             let query = `doctorId=${doctorId}&date=${appointmentDate}`;
 
-            const res = await getTimeSlotsByDoctorAndDate(query);
+            const res = await getTimeSlotsByDoctorAndDateEmpty(query);
             console.log("res fetch: ", res);
 
             if (res && res.timeGioList) {
