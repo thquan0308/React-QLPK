@@ -546,7 +546,7 @@ const BodyHomePage = () => {
                     >
                         Gợi ý của BookingCare
                     </span>
-                    {/* {items.map((item, index) => (
+                    {items.map((item, index) => (
                         <Col
                             key={index}
                             md={6}
@@ -556,8 +556,8 @@ const BodyHomePage = () => {
                         >
                             <HinhTron src={item.src} txtP={item.txtP} />
                         </Col>
-                    ))} */}
-                    {items2.map((item, index) => (
+                    ))}
+                    {/* {items2.map((item, index) => (
                         <Col
                             key={index}
                             md={6}
@@ -571,7 +571,7 @@ const BodyHomePage = () => {
                                 redirectChuyenKhoa={item.navigate}
                             />
                         </Col>
-                    ))}
+                    ))} */}
                 </Row>
             </div>
         </>
