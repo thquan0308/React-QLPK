@@ -24,6 +24,12 @@ ReactJS, Node.js, Express.js, MongoDB, Boostrap
 -   Xây dựng hệ thống phân quyền rõ ràng để đảm bảo quản lý một cách hiệu quả.
 -   Quản lý phòng khám, bác sĩ, lịch làm việc và chuyên khoa cho quản trị viên.
 
+### Thực hành:
+
+Link Frontend: https://github.com/thquan0308/React-QLPK
+Link Frontend quản lý doctor:https://github.com/thquan0308/React-QLPK-doctor
+Link Backend: https://github.com/thquan0308/NodeJS-QLPK
+
 ===
 
 Các bước cài đặt: (chế độ development)
