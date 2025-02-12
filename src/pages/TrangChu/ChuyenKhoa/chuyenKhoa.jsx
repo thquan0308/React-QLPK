@@ -110,4 +110,5 @@ const ChuyenKhoa = () => {
         </>
     );
 };
+
 export default ChuyenKhoa;

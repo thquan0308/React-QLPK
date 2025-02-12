@@ -683,6 +683,7 @@ const PageDatLichKham = () => {
                                                 <Radio
                                                     style={{ fontSize: "16px" }}
                                                     value={false}
+                                                    disabled
                                                 >
                                                     Thanh toán Online (đang phát
                                                     triển)

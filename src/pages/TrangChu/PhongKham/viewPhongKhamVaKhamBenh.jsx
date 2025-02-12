@@ -749,7 +749,7 @@ const ViewPhongKhamVaKhamBenh = () => {
                     </Row>
                 </Col>
             </Row>
-            <Footer />
+            {/* <Footer /> */}
         </>
     );
 };
