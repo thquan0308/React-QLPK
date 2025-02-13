@@ -72,6 +72,14 @@ Website được xây dựng trên nền tảng ReactJS và NodeJS trong môi tr
 
 # ![Giao diện quản lý của quản trị viên](src/assets/7.png)
 
+### Link dự án
+
+Link FE: https://github.com/thquan0308/React-QLPK
+
+Link FE quản lý doctor:https://github.com/thquan0308/React-QLPK-doctor
+
+Link BE: https://github.com/thquan0308/NodeJS-QLPK
+
 ### Các bước cài đặt:
 
 1. Cài đặt ứng dụng ReactJS: Gõ lệnh
