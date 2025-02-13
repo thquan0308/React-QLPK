@@ -28,21 +28,19 @@ ReactJS, Node.js, Express.js, MongoDB, Boostrap
 
 -   Giao diện trang chủ
 
-src\assets\1.png
-src\assets\2.png
-src\assets\3.png
-src\assets\4.png
-src\assets\5.png
+![Giao diện trang chủ](src/assets/1.png)
+![Giao diện trang chủ](src/assets/2.png)
+![Giao diện trang chủ](src/assets/3.png)
+![Giao diện trang chủ](src/assets/4.png)
+![Giao diện trang chủ](src/assets/5.png)
 
 -   Giao diện quản lý của bác sĩ
 
-src\assets\6.png
+![Giao diện quản lý của bác sĩ](src/assets/6.png)
 
 -   Giao diện quản lý của quản trị viên
 
-src\assets\7.png
-
-===
+# ![Giao diện quản lý của quản trị viên](src/assets/7.png)
 
 ### Các bước cài đặt:
 
