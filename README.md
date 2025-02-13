@@ -24,29 +24,36 @@ ReactJS, Node.js, Express.js, MongoDB, Boostrap
 -   Xây dựng hệ thống phân quyền rõ ràng để đảm bảo quản lý một cách hiệu quả.
 -   Quản lý phòng khám, bác sĩ, lịch làm việc và chuyên khoa cho quản trị viên.
 
-### Thực hành:
+### GIAO DIỆN WEBSITE
 
-Link Frontend: https://github.com/thquan0308/React-QLPK
+-   Giao diện trang chủ
 
-Link Frontend quản lý doctor:https://github.com/thquan0308/React-QLPK-doctor
+src\assets\1.png
+src\assets\2.png
+src\assets\3.png
+src\assets\4.png
+src\assets\5.png
 
-Link Backend: https://github.com/thquan0308/NodeJS-QLPK
+-   Giao diện quản lý của bác sĩ
+
+src\assets\6.png
+
+-   Giao diện quản lý của quản trị viên
+
+src\assets\7.png
 
 ===
 
-Các bước cài đặt: (chế độ development)
+### Các bước cài đặt:
 
-1. clone code
-2. cài đặt thư viện: npm i
-3. Update file .env.development (nếu cần thiết)
-4. Chạy dự án: npm run dev
+1. Cài đặt ứng dụng ReactJS: Gõ lệnh
+   npm install
+   npm start
 
-===
+2. Cài đặt ứng dụng ReactJS_doctor: Gõ lệnh
+   npm install
+   npm start
 
-Cách chạy tại chế độ production:
-
-1. clone code
-2. cài đặt thư viện: npm i
-3. Update file .env.production (nếu cần thiết)
-4. Build dự án: npm run build
-5. Chạy dự án: npm run preview
+3. Các phiên bản sử dụng
+   Node version v22.11.0
+   Npm version 10.9.0
